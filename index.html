@@ -15,11 +15,15 @@
 	<div class="form-group">
     <input placeholder="Search" ng-model="search">
 	</div>
-	 <img id="spinner" ng-src="ajax-loader.gif" style="display:none;">
 	 <ul class="part-list">
 	<li ng-repeat="result in hslbus">{{result.bus_number}}</li>
-
 <!---
+	<li ng-repeat="result in hsltime">{{result.start_time}}</li>
+	<li>{{hslbus.collection2[0].bus_number}}@{{hsltime.collection1[0].start_time}}</li>
+	<li>{{hslbus.collection1[1].bus_number}}@{{hsltime.collection1[1].start_time[1]}}</li>
+	<li>{{hslbus.collection2[2].bus_number}}@{{hsltime.collection1.start_time[1]}}</li>
+    
+
     <li ng-repeat="result in hsltime">
       {{result.start_time}}
     </li>

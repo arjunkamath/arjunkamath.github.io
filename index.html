@@ -17,9 +17,17 @@
 	</div>
 	 <img id="spinner" ng-src="ajax-loader.gif" style="display:none;">
 	 <ul class="part-list">
-    <li ng-repeat="result in allresults | filter:search | filter: '!Myyty'">
-      <a ng-style="result.item.href == 'http://www.fillari-lehti.fi/Tori.aspx' && {'color': 'black'}" href="{{result.item.href}}">{{result.item.text}}</a>
+	<li ng-repeat="result in allresults">{{result.item.text}}</li>
+	<li ng-repeat="result in hslbus">{{result.bus_number}}</li>
+
+<!---
+    <li ng-repeat="result in hsltime">
+      {{result.start_time}}
     </li>
+    <li ng-repeat="answer in hsl_time">{{answer.start_time}}@{{1+2}} </li>
+    <li>{{hsl_time.collection2[1].bus_number}} and {{1+2}}</li>
+     <li>{{hsl_bus.collection2[1].bus_number}}</li>
+    <li>{{hsl_bus.collection2[1].bus_number}}</li> --->
   </ul>
   </div>
   </body>

@@ -1,5 +1,6 @@
 app.controller('AppController', function($scope, $http) {
-	
+
+   var hsl = 'https://www.kimonolabs.com/api/aiidm0q8?apikey=jvGLSJppQ52Xpgelxepq468kRrKNEgli&callback=JSON_CALLBACK';	
    var fixes_url = 'https://www.kimonolabs.com/api/2o3try8i?apikey=06009849069bc5807cded9e31b4d029b&callback=JSON_CALLBACK';
    var brakes_url = 'https://www.kimonolabs.com/api/e44espis?apikey=06009849069bc5807cded9e31b4d029b&callback=JSON_CALLBACK';
    var seats_url = 'https://www.kimonolabs.com/api/9bt8hm54?apikey=06009849069bc5807cded9e31b4d029b&callback=JSON_CALLBACK';
@@ -13,6 +14,15 @@ app.controller('AppController', function($scope, $http) {
    
    
    $scope.allresults = [];
+//   $scope.hsltime = [];
+   $scope.hslbus = [];
+
+   $http.jsonp(hsl).success(function(data) {
+     // $scope.allresults.push.apply($scope.hsltime, data.results.collection1);
+      $scope.hslbus.push.apply($scope.hslbus, data.results.collection2);
+    });
+
+
    $http.jsonp(frames_url).success(function(data) {
       $scope.allresults.push.apply($scope.allresults, data.results.collection1);
    });

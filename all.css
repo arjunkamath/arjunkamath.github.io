@@ -142,8 +142,7 @@ table {
 		width: 100%; 
 		border-collapse: collapse; 
 	}
-	/* Zebra striping */
-	tr:nth-of-type(odd) { 
+	tr { 
 		background: #eee; 
 	}
 	th { 

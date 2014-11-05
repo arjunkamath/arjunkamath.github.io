@@ -33,10 +33,10 @@ app.controller('AppController', function($scope, $http) {
 	  console.log("2ng script:" + n);
 	  
 	  $scope.antell_menu.push.apply($scope.antell_menu, data.results.collection1); 
-		$scope.antell_menu.push.apply($scope.antell_menu, data.results.collection2); 
-		$scope.antell_menu.push.apply($scope.antell_menu, data.results.collection3); 
-		$scope.antell_menu.push.apply($scope.antell_menu, data.results.collection4); 
-		$scope.antell_menu.push.apply($scope.antell_menu, data.results.collection5); 
+	  $scope.antell_menu.push.apply($scope.antell_menu, data.results.collection2); 
+	  $scope.antell_menu.push.apply($scope.antell_menu, data.results.collection3); 
+	  $scope.antell_menu.push.apply($scope.antell_menu, data.results.collection4); 
+	  $scope.antell_menu.push.apply($scope.antell_menu, data.results.collection5); 
 	  
 	  
 		if (n === 1)

@@ -11,10 +11,10 @@
   </head>
   
   <body ng-controller='AppController'>
+  <div class="header-cont"><div class="header">
+	<h2 style="text-align:center;font-size: 300%;"><b>LMF NOW</b><span style="float:right; font-size: 50%">{{display_date|date:'EEE'}}, {{display_date|date}}</span></h2>
+  </div></div>
   <div class="container">
-	<h2 style="text-align:left;">LMF NOW<span style="float:right;">{{display_date|date:'EEE'}}, {{display_date|date}}</span></h2>
-	<div class="form-group">
-	</div>
 	<img id="spinner" ng-src="loader.gif" style="display:none;">
 	 <ul class="part-list">
 <!--	<li ng-repeat="result in hslbus">{{result.bus_number}}</li>

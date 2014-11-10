@@ -43,10 +43,28 @@ a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
   }
-  
+
+.header-cont {
+    width:100%;
+    position:fixed;
+    top:0px;
+}
+.header {
+    height:75px;
+    background:#F0F0F0;
+    border:1px solid #CCC;
+    margin:0px auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ 
 .container {
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  padding-top: 65px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -141,19 +159,19 @@ h1 {
 }
 
 table { 
-		width: 100%; 
-		border-collapse: collapse; 
-	}
-	tr { 
-		background: #eee; 
-	}
-	th { 
-		background: #333; 
-		color: white; 
-		font-weight: bold; 
-	}
-	td, th { 
-		padding: 6px; 
-		border: 1px solid #ccc; 
-		text-align: left; 
-	}
+	width: 100%; 
+	border-collapse: collapse; 
+}
+tr { 
+	background: #eee; 
+}
+th { 
+	background: #333; 
+	color: white; 
+	font-weight: bold; 
+}
+td, th { 
+	padding: 6px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+}

@@ -51,8 +51,8 @@
 
 	<table class="table table-striped">
         <th align="left" ng-click="showSingleMenuDetails = ! showSingleMenuDetails">Today's menu</th>
-	<tr ng-repeat="result in antell_single_day_menu" ng-show="!$first">
-		<td ng-show="!showSingleMenuDetails" ng-hide="result.menu==''">{{result.menu}}</td>
+	<tr ng-show="!showSingleMenuDetails && !$first" ng-repeat="result in antell_single_day_menu">
+		<td ng-hide="result.menu==''">{{result.menu}}</td>
 	</tr>
 	</table>
 

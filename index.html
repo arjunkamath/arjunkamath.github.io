@@ -60,7 +60,7 @@
    
         <table class="table table-striped">
         <th align="left" ng-click="showFullMenuDetails = ! showFullMenuDetails">This week's menu</th>
-	<tr ng-show="!showFullMenuDetails" ng-repeat="result in antell_menu">
+	<tr ng-show="showFullMenuDetails" ng-repeat="result in antell_menu">
 		<td ng-hide="result.menu==''">{{result.menu}}</td>
 	</tr>
 	</table>

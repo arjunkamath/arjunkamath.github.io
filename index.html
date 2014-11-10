@@ -26,41 +26,41 @@
 	<br>							     -->
 
 	<table class="table table-striped">
-	<th align="left">Buses to Helsinki</th>
+	<th align="left" ng-click="showBusDetails = ! showBusDetails">Buses to Helsinki</th>
 	<tr>
-		<td>{{hslbus[0].bus_number}} @ {{hsltime[0].start_time}}</td>
+		<td ng-show="!showBusDetails">{{hslbus[0].bus_number}} @ {{hsltime[0].start_time}}</td>
 	</tr>
 	<tr>
-		<td>{{hslbus[1].bus_number}} @ {{hsltime[1].start_time}}</td>
+		<td ng-show="!showBusDetails">{{hslbus[1].bus_number}} @ {{hsltime[1].start_time}}</td>
 	</tr>
 	<tr>
-		<td>{{hslbus[2].bus_number}} @ {{hsltime[2].start_time}}</td>
+		<td ng-show="!showBusDetails">{{hslbus[2].bus_number}} @ {{hsltime[2].start_time}}</td>
 	</tr>
 	</table>
 
 	<br>
 	
-	<table class="table table-striped">
-	<th align="left">Weather</th>
+	<table class="table table-striped" ng-click="ng-hide">
+	<th align="left" ng-click="showWeatherDetails = ! showWeatherDetails">Weather</th>
 	<tr>
-		<td>{{((weather[0].temperature-32)*5.0)/9.0 | number:2}} C</td>
+		<td ng-show="!showWeatherDetails">{{((weather[0].temperature-32)*5.0)/9.0 | number:2}} C</td>
 	</tr>
 	</table>
 
 	<br>
 
 	<table class="table table-striped">
-        <th align="left">Today's menu</th>
+        <th align="left" ng-click="showSingleMenuDetails = ! showSingleMenuDetails">Today's menu</th>
 	<tr ng-repeat="result in antell_single_day_menu" ng-show="!$first">
-		<td ng-hide="result.menu==''">{{result.menu}}</td>
+		<td ng-show="!showSingleMenuDetails" ng-hide="result.menu==''">{{result.menu}}</td>
 	</tr>
 	</table>
 
 	<br>
    
         <table class="table table-striped">
-        <th align="left">This week's menu</th>
-	<tr ng-repeat="result in antell_menu">
+        <th align="left" ng-click="showFullMenuDetails = ! showFullMenuDetails">This week's menu</th>
+	<tr ng-show="!showFullMenuDetails" ng-repeat="result in antell_menu">
 		<td ng-hide="result.menu==''">{{result.menu}}</td>
 	</tr>
 	</table>

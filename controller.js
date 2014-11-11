@@ -1,7 +1,6 @@
 app.controller('AppController', function($scope, $http) {
 
    var hsl = 'https://www.kimonolabs.com/api/aiidm0q8?apikey=jvGLSJppQ52Xpgelxepq468kRrKNEgli&callback=JSON_CALLBACK';	
-   var espoo_temp = 'https://www.kimonolabs.com/api/6j6i6ot2?apikey=jvGLSJppQ52Xpgelxepq468kRrKNEgli&callback=JSON_CALLBACK';
    //var antell_url = 'https://www.kimonolabs.com/api/8k73atw6?apikey=jvGLSJppQ52Xpgelxepq468kRrKNEgli&callback=JSON_CALLBACK';
    var antell_url = 'https://www.kimonolabs.com/api/6hl3375i?apikey=jvGLSJppQ52Xpgelxepq468kRrKNEgli&callback=JSON_CALLBACK';
    
@@ -20,10 +19,6 @@ app.controller('AppController', function($scope, $http) {
       $scope.hslbus.push.apply($scope.hslbus, data.results.collection2);
     });
 
-   $http.jsonp(espoo_temp).success(function(data) {
-      $scope.weather.push.apply($scope.weather, data.results.collection1);
-   });
-	
    $http.jsonp(antell_url).success(function(data) {
       $scope.antell_menu.push.apply($scope.antell_menu, data.results.collection1); 
       $scope.antell_menu.push.apply($scope.antell_menu, data.results.collection2); 

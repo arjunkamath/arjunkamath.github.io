@@ -50,7 +50,7 @@ a:focus {
     top:0px;
 }
 .header {
-    height:75px;
+    height:80px;
     background:#F0F0F0;
     border:1px solid #CCC;
     margin:0px auto;
@@ -64,7 +64,7 @@ a:focus {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  padding-top: 65px;
+  padding-top: 70px;
   margin-right: auto;
   margin-left: auto;
 }

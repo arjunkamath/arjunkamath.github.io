@@ -16,7 +16,10 @@
   
   <body ng-controller='AppController'>
   <div class="header-cont"><div class="header">
-	<h2 style="text-align:center;font-size: 300%;"><b>LMF NOW</b><span style="float:right; font-size: 50%">{{display_date|date:'EEE'}}, {{display_date|date}}</span></h2>
+
+	<div style="position:absolute;width:100%;text-align:center"><h1><b>LMF NOW</b></h1></div>
+	<div style="text-align:right"><h2>{{display_date|date:'EEE'}}, {{display_date|date}}</h2></div>
+
   </div></div>
   <div class="container">
 	<img id="spinner" ng-src="loader.gif" style="display:none;">

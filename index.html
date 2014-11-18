@@ -46,10 +46,18 @@
 	
 	<table class="table table-striped" ng-click="ng-hide">
 	<th align="left" ng-click="showWeatherDetails = ! showWeatherDetails">Weather</th>
-	</tr>
 	<tr>
-		<td ng-show="!showWeatherDetails"><div id="weather"></div></td>
+		<td ng-show="!showWeatherDetails"><div id="weather_hel"></div></td>
 	</tr>
+        <tr>	
+		<td ng-show="!showWeatherDetails"><div id="weather_kik"></div></td>
+        </tr>
+        <tr>	
+		<td ng-show="!showWeatherDetails"><div id="weather_esp"></div></td>
+        </tr>
+        <tr>	
+		<td ng-show="!showWeatherDetails"><div id="weather_tur"></div></td>
+        </tr>
 	</table>
 
 	<br>
@@ -80,7 +88,5 @@
 	<br>
 	
   </ul>
-  </div>
-	<div id="weather"></div>
   </body>
 </html>

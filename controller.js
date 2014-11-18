@@ -25,6 +25,7 @@ app.controller('AppController', function($scope, $http) {
    $http.jsonp(hsl_back).success(function(data) {
       $scope.hsltime_back.push.apply($scope.hsltime_back, data.results.collection1);
       $scope.hslbus_back.push.apply($scope.hslbus_back, data.results.collection2);
+   });
 
    $http.jsonp(antell_url).success(function(data) {
       $scope.antell_menu.push.apply($scope.antell_menu, data.results.collection1); 

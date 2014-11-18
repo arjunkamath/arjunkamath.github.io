@@ -1,6 +1,7 @@
 app.controller('AppController', function($scope, $http) {
 
    var hsl = 'https://www.kimonolabs.com/api/aiidm0q8?apikey=jvGLSJppQ52Xpgelxepq468kRrKNEgli&callback=JSON_CALLBACK';	
+   var hsl_back = 'https://www.kimonolabs.com/api/4f7yboo6?apikey=jvGLSJppQ52Xpgelxepq468kRrKNEgli&callback=JSON_CALLBACK';	
    //var antell_url = 'https://www.kimonolabs.com/api/8k73atw6?apikey=jvGLSJppQ52Xpgelxepq468kRrKNEgli&callback=JSON_CALLBACK';
    var antell_url = 'https://www.kimonolabs.com/api/6hl3375i?apikey=jvGLSJppQ52Xpgelxepq468kRrKNEgli&callback=JSON_CALLBACK';
    
@@ -8,7 +9,9 @@ app.controller('AppController', function($scope, $http) {
    var day = date.getDay()
  
    $scope.hsltime = [];
+   $scope.hsltime_back = [];
    $scope.hslbus = [];
+   $scope.hslbus_back = [];
    $scope.weather = [];
    $scope.antell_menu = [];
    $scope.antell_single_day_menu = [];
@@ -18,6 +21,10 @@ app.controller('AppController', function($scope, $http) {
       $scope.hsltime.push.apply($scope.hsltime, data.results.collection1);
       $scope.hslbus.push.apply($scope.hslbus, data.results.collection2);
     });
+   
+   $http.jsonp(hsl_back).success(function(data) {
+      $scope.hsltime_back.push.apply($scope.hsltime_back, data.results.collection1);
+      $scope.hslbus_back.push.apply($scope.hslbus_back, data.results.collection2);
 
    $http.jsonp(antell_url).success(function(data) {
       $scope.antell_menu.push.apply($scope.antell_menu, data.results.collection1); 

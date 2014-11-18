@@ -30,14 +30,18 @@
 	<br>							     -->
 	
 	<table class="table table-striped">
-	<th align="left" ng-click="showBusDetails = ! showBusDetails">Buses to Helsinki</th>
+	<th align="left" ng-click="showBusDetails = ! showBusDetails">HEL TO JORV</th>
+	<th align="left" ng-click="showBusDetails = ! showBusDetails">JORV TO HEL</th>
 	<tr>
+		<td ng-show="!showBusDetails">{{hslbus_back[0].bus_number}} @ {{hsltime_back[0].start_time}}</td>
 		<td ng-show="!showBusDetails">{{hslbus[0].bus_number}} @ {{hsltime[0].start_time}}</td>
 	</tr>
 	<tr>
+		<td ng-show="!showBusDetails">{{hslbus_back[1].bus_number}} @ {{hsltime_back[1].start_time}}</td>
 		<td ng-show="!showBusDetails">{{hslbus[1].bus_number}} @ {{hsltime[1].start_time}}</td>
 	</tr>
 	<tr>
+		<td ng-show="!showBusDetails">{{hslbus_back[2].bus_number}} @ {{hsltime_back[2].start_time}}</td>
 		<td ng-show="!showBusDetails">{{hslbus[2].bus_number}} @ {{hsltime[2].start_time}}</td>
 	</tr>
 	</table>
@@ -45,17 +49,13 @@
 	<br>
 	
 	<table class="table table-striped" ng-click="ng-hide">
-	<th align="left" ng-click="showWeatherDetails = ! showWeatherDetails">Weather</th>
+	<th align="left" ng-click="showWeatherDetails = ! showWeatherDetails" colspan="2">Weather</th>
 	<tr>
 		<td ng-show="!showWeatherDetails"><div id="weather_hel"></div></td>
-	</tr>
-        <tr>	
 		<td ng-show="!showWeatherDetails"><div id="weather_kik"></div></td>
         </tr>
         <tr>	
 		<td ng-show="!showWeatherDetails"><div id="weather_esp"></div></td>
-        </tr>
-        <tr>	
 		<td ng-show="!showWeatherDetails"><div id="weather_tur"></div></td>
         </tr>
 	</table>

@@ -17,10 +17,17 @@
 			var height = $("#height ").val();  
 			var age = $("#age ").val();  
 
-			{
-				var resl = 66.47 + (13.75 * parseFloat(weight)) + (5*parseFloat(height)) - (6.76*parseFloat(age));
-				$("#resl").val(resl);
-			}
+			var resl = 66.47 + (13.75 * parseFloat(weight)) + (5*parseFloat(height)) - (6.76*parseFloat(age));
+			$("#resl").val(resl);
+				
+			$.ajax({
+				url: 'https://api.aws-eu-west-1.orchestrate.io/v0/food/example',
+				type: 'PUT',
+				contentType: "application/json",
+				username: "42cc4a4c-16e7-4320-aa52-e138c387411a:",
+				data: '{"hi":"bye"}', // or $('#myform').serializeArray()
+				success: function() { alert('PUT completed'); }
+			});	
 		}
 	</script>
     <title>LMF_Now</title>

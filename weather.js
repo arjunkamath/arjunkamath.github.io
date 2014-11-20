@@ -28,6 +28,7 @@ $(document).ready(function() {
     }
   });
 
+  
 
   $.simpleWeather({
     location: 'Espoo',

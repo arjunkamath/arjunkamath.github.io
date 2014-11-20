@@ -10,7 +10,19 @@
      <script src="weather.js"></script>
      <script src="app.js"></script>
      <script src="controller.js"></script>
+	<script> 
+  function add()
+{
+      var weight = $("#weight").val();
+      var height = $("#height ").val();  
+      var age = $("#age ").val();  
 
+      {
+          var resl = 66.47 + (13.75 * parseFloat(weight)) + (5*parseFloat(height)) - (6.76*parseFloat(age));
+          $("#resl").val(resl);
+      }
+}
+</script>
     <title>LMF_Now</title>
   </head>
   
@@ -68,6 +80,17 @@
 	</table>
 
 	<br>
+	
+	<form name=first>
+<table>
+  <th align="left" >Enter your details</th>
+  <tr> <td> Weight </td> <td> = <input type=text id=weight> </td></tr>
+  <tr> <td> Height </td> <td> = <input type=text id=height> </td></tr>
+  <tr> <td> Age </td> <td> = <input type=text id=age> </td></tr>
+  <tr> <td colspan=2> <input type=button onclick=add() value=Calculate> <input type=reset value=Reset> </td> </tr>
+  <tr> <td> Energy Consumption at rest in kCal(/day)</td> <td> = <input type=text id=resl readonly> </td></tr>
+</table>
+</form>
 
 	<table class="table table-striped">
         <th align="left" ng-click="showSingleMenuDetails = ! showSingleMenuDetails">Today's menu</th>

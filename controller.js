@@ -16,6 +16,7 @@ app.controller('AppController', function($scope, $http) {
    $scope.antell_menu = [];
    $scope.antell_single_day_menu = [];
    $scope.exer_for_today = [];
+   $scope.exer_for_week = [];
    $scope.display_date = date;
    
    var exer_mon = ["Athletico T25 @ 15:00", "Floorball @ 17:00", "Badminton @ 16:30"];
@@ -23,6 +24,20 @@ app.controller('AppController', function($scope, $http) {
    var exer_wed = ["Floorball @ 7:30", "Jogging @ 11:00", "Athletico T25 @ 15:00", "Badminton @ 16:30", "Bowling @ 17:00"];
    var exer_thu = ["Athletico T25 @ 15:00", "Badminton @ 16:30" ,"Athletico Asylum @ 17:00"];
    var exer_fri = ["Rinkball @ 7:00", "Athletico T25 @ 15:00", "Basketball @ 16:00", "Athletico Asylum @ 17:00"];
+   
+   
+   
+   $scope.exer_for_week.push.apply($scope.exer_for_week, exer_mon);
+   
+   $scope.exer_for_week.push.apply($scope.exer_for_week, exer_tue);
+   
+   $scope.exer_for_week.push.apply($scope.exer_for_week, exer_wed);
+   
+   $scope.exer_for_week.push.apply($scope.exer_for_week, exer_thu);
+   
+   $scope.exer_for_week.push.apply($scope.exer_for_week, exer_fri);
+   
+   console.log($scope.exer_for_week);
    
    if (day === 1)
    {

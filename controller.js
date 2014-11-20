@@ -19,11 +19,11 @@ app.controller('AppController', function($scope, $http) {
    $scope.exer_for_week = [];
    $scope.display_date = date;
    
-   var exer_mon = ["Athletico T25 @ 15:00", "Floorball @ 17:00", "Badminton @ 16:30"];
-   var exer_tue = ["Athletico T25 @ 15:00", "Badminton @ 16:30"];
-   var exer_wed = ["Floorball @ 7:30", "Jogging @ 11:00", "Athletico T25 @ 15:00", "Badminton @ 16:30", "Bowling @ 17:00"];
-   var exer_thu = ["Athletico T25 @ 15:00", "Badminton @ 16:30" ,"Athletico Asylum @ 17:00"];
-   var exer_fri = ["Rinkball @ 7:00", "Athletico T25 @ 15:00", "Basketball @ 16:00", "Athletico Asylum @ 17:00"];
+   var exer_mon = ["Monday", "Athletico T25 @ 15:00", "Floorball @ 17:00", "Badminton @ 16:30"];
+   var exer_tue = ["Tuesday", "Athletico T25 @ 15:00", "Badminton @ 16:30"];
+   var exer_wed = ["Wednesday", "Floorball @ 7:30", "Jogging @ 11:00", "Athletico T25 @ 15:00", "Badminton @ 16:30", "Bowling @ 17:00"];
+   var exer_thu = ["Thursday", "Athletico T25 @ 15:00", "Badminton @ 16:30" ,"Athletico Asylum @ 17:00"];
+   var exer_fri = ["Friday", "Rinkball @ 7:00", "Athletico T25 @ 15:00", "Basketball @ 16:00", "Athletico Asylum @ 17:00"];
    
    
    

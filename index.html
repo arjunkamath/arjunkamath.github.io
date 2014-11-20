@@ -84,16 +84,16 @@
 	<table class="table table-striped" ng-click="ng-hide">
 	<th align="left" ng-click="showExerDetails = ! showExerDetails" colspan="3">Today's exercises</th>
 	<tr ng-repeat="exer in exer_for_today">
-		<td ng-show="!showExerDetails">{{exer}}</td>
+		<td ng-show="!showExerDetails && !$first">{{exer}}</td>
     </tr>
 	</table>
 	
 	<br>
 	
 	<table class="table table-striped" ng-click="ng-hide">
-	<th align="left" >Week's exercises</th>
+	<th align="left" ng-click="showWeekExerDetails = ! showWeekExerDetails" colspan="3">Week's exercises</th>
 	<tr ng-repeat="exer in exer_for_week track by $index">
-		<td>{{exer}}</td>
+		<td ng-class="{bold:({{!((exer +'').length > 10)}})}" ng-show="showWeekExerDetails" >{{exer}}</td>
     </tr>
 	</table>
 	

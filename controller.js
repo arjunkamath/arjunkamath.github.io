@@ -7,7 +7,7 @@ app.controller('AppController', function($scope, $http) {
    
    var date = new Date();
    var day = date.getDay()
- 
+   
    $scope.hsltime = [];
    $scope.hsltime_back = [];
    $scope.hslbus = [];
@@ -15,7 +15,50 @@ app.controller('AppController', function($scope, $http) {
    $scope.weather = [];
    $scope.antell_menu = [];
    $scope.antell_single_day_menu = [];
+   $scope.exer_for_today = [];
    $scope.display_date = date;
+   
+   var exer_mon = ["Athletico T25 @ 15:00", "Floorball @ 17:00", "Badminton @ 16:30"];
+   var exer_tue = ["Athletico T25 @ 15:00", "Badminton @ 16:30"];
+   var exer_wed = ["Floorball @ 7:30", "Jogging @ 11:00", "Athletico T25 @ 15:00", "Badminton @ 16:30", "Bowling @ 17:00"];
+   var exer_thu = ["Athletico T25 @ 15:00", "Badminton @ 16:30" ,"Athletico Asylum @ 17:00"];
+   var exer_fri = ["Rinkball @ 7:00", "Athletico T25 @ 15:00", "Basketball @ 16:00", "Athletico Asylum @ 17:00"];
+   
+   if (day === 1)
+   {
+		var exer_today = exer_mon;
+		$scope.exer_for_today.push.apply($scope.exer_for_today, exer_today);
+		console.log (exer_today);
+		console.log ($scope.exer_for_today);
+   }
+   else if (day === 2)
+   {
+		var exer_today = exer_tue;
+		$scope.exer_for_today.push.apply($scope.exer_for_today, exer_today);
+		console.log (exer_today);
+		console.log ($scope.exer_for_today);
+   }
+	else if (day === 3)
+   {
+		var exer_today = exer_wed;
+		$scope.exer_for_today.push.apply($scope.exer_for_today, exer_today);
+		console.log (exer_today);
+		console.log ($scope.exer_for_today);
+   }
+   else if (day === 4)
+   {
+		var exer_today = exer_thu;
+		$scope.exer_for_today.push.apply($scope.exer_for_today, exer_today);
+		console.log (exer_today);
+		console.log ($scope.exer_for_today);
+   }
+   else if (day === 5)
+   {
+		var exer_today = exer_fri;
+		$scope.exer_for_today.push.apply($scope.exer_for_today, exer_today);
+		console.log (exer_today);
+		console.log ($scope.exer_for_today);
+   }
    
    $http.jsonp(hsl).success(function(data) {
       $scope.hsltime.push.apply($scope.hsltime, data.results.collection1);
@@ -37,7 +80,7 @@ app.controller('AppController', function($scope, $http) {
       if (day === 1)
       {
         console.log("Weekday:" + day);
-	$scope.antell_single_day_menu.push.apply($scope.antell_single_day_menu, data.results.collection1); 
+		$scope.antell_single_day_menu.push.apply($scope.antell_single_day_menu, data.results.collection1); 
       }
       else if (day === 2)
       {

@@ -23,7 +23,7 @@ app.controller('AppController', function($scope, $http) {
    var exer_tue = ["Tuesday", "Athletico T25 @ 15:00 (GYM)", "Badminton @ 16:30 (Forever, Martinkartanontie 1)"];
    var exer_wed = ["Wednesday", "Floorball @ 7:30 (Lahitapiola Hall)", "Jogging @ 11:00 (**From Cafeteria**)", "Athletico T25 @ 15:00 (GYM)", "Badminton @ 16:30 (Forever, Martinkartanontie 1)", "Bowling @ 17:00 (Kauppamiehentie 6)"];
    var exer_thu = ["Thursday", "Athletico T25 @ 15:00 (GYM)", "Badminton @ 16:30 (Forever, Martinkartanontie 1)" ,"Athletico Asylum @ 17:00 (GYM)"];
-   var exer_fri = ["Friday", "Rinkball @ 7:00 (Varuboden Arena)", "Athletico T25 @ 15:00 (GYM)", "Basketball @ 16:00 (Kartanonrannan koulo)", "Athletico Asylum @ 17:00 (GYM)"];
+   var exer_fri = ["Friday", "Rinkball @ 7:00 (Varuboden Arena)", "Athletico T25 @ 15:00 (GYM)", "Basketball @ 16:00 (Kartanonrannan koulu)", "Athletico Asylum @ 17:00 (GYM)"];
    
    
    

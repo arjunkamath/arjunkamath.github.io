@@ -99,9 +99,11 @@
 	
 	<table class="table table-striped" ng-click="ng-hide">
 	<th align="left" ng-click="showWeekExerDetails = ! showWeekExerDetails" colspan="3">Week's exercises</th>
+    
 	<tr ng-repeat="exer in exer_for_week track by $index">
 		<td ng-class="{bold:({{!((exer +'').length > 10)}})}" ng-show="showWeekExerDetails" >{{exer}}</td>
     </tr>
+ 
 	</table>
 	
 	<br>
@@ -133,7 +135,11 @@
 		<td ng-class="{bold:({{!((result.menu +'').length > 12)}})}" ng-hide="result.menu==''">{{result.menu}}</td>
 	</tr>
 	</table>
-	
+	<BR>
+	<table class="table table-striped">
+	   <th align="left">Carpooling and other shouts</th>
+	<TR><TD><noscript>Enable Javascript to get full functionality of this <a href="http://www.freeshoutbox.net/">shoutbox</a><br /></noscript><iframe src="http://lmfnowtest.freeshoutbox.net/" height="300" width="500" frameborder="0"></iframe>
+	</TD></TR></table>
 	<br>
 	<a class="twitter-timeline" href="https://twitter.com/ericsson_fi" data-widget-id="532184835570163712">Tweets by @ericsson_fi</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

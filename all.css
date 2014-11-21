@@ -51,7 +51,8 @@ a:focus {
 }
 .header {
     height:80px;
-    background:#F0F0F0;
+    background-image: url("head_back.jpg");
+	background-size: cover;
     border:1px solid #CCC;
     margin:0px auto;
     margin-right: auto;
